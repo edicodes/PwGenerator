@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box
+}
+:root {
+    --clr-card: #1F2937;
+    --clr-text-primary: #fff;
+    --clr-accent: #4ADF86;
+    
+    --clr-desat-bg: #273549;
+;
+}
+
+body {
+    margin: 0;
+    font-family: 'inter', sans-serif;
+    font-weight: 500; 
+    color: var(--clr-text-primary);
+    font-size: 1rem;
+    
+    background-color: #1C1C1C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+}
+
+h1 {
+    font-family: 'Karla';
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 1;
+    text-wrap: balance;
+}
+
+.accent {
+    color: var(--clr-accent);
+}
+
+.subtitle {
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 400;  
+}
+
+.card {
+    width: min(100%, 550px);
+    /* aspect-ratio: 1; */
+    background-color: var(--clr-card);
+    padding: 3.25rem;
+}
+
+#generate-btn {
+    background-color: var(--clr-accent);
+    font-family: inherit;
+    font-weight: inherit; 
+    color: inherit;
+    border: none; 
+    padding: .5625rem 1rem;
+    border-radius: .375rem; 
+    margin-block-start: 3rem;
+    cursor: pointer;
+}
+
+.copy-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;    
+    font-size: inherit;
+    color: inherit;
+}
+
+.generator {
+    border-top: 1px solid var(--clr-desat-bg);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center; 
+    margin-block-start: 2.125rem; 
+    padding: 2.125rem 0; 
+    gap: 1.5rem;
+    /* outline: 1px solid red; */
+}
+
+.pw {
+    background-color: var(--clr-desat-bg);
+    border-radius: .375rem; 
+    color: var(--clr-accent);
+    min-height: 5rem;
+    padding: 0 1em;
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5em;
+    height: 50px; 
+    position: relative; 
+}
+
+.copy-btn i {
+    color: white;
+}
+
+[data-copy-tooltip] {
+    background: white;
+    color: var(--clr-card);
+    font-size: small;
+    text-align: center;
+    text-wrap: balance;
+    width: 15ch;
+    box-shadow: 0 0 .5rem rgba(74, 223, 134, .2);
+    padding: .75em; 
+    border-radius: .25rem;
+    position: absolute;
+    top: 1.25rem;
+    right: .5rem;
+    z-index: 5;
+    opacity: 0;
+    transform: scaleY(0);
+    pointer-events: none;
+    transition: opacity 300ms ease, transform 300ms ease; 
+}
+
+.show {
+    opacity: 1; 
+    transform: scaleY(1);
+}
+
+@media (max-width: 500px) {
+    .generator {
+        flex-direction: column;
+        gap: 1rem; 
+    }
+    
+    .pw {
+        width: 100%;
+        min-height: 2rem;
+        flex-basis: initial;
+    }
+}
