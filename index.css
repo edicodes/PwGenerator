@@ -88,7 +88,6 @@ h1 {
     background-color: var(--clr-desat-bg);
     border-radius: .375rem; 
     color: var(--clr-accent);
-    min-height: 5rem;
     padding: 0 1em;
     flex-basis: 100%;
     display: flex;
