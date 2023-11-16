@@ -95,7 +95,7 @@ h1 {
     justify-content: space-between;
     align-items: center;
     gap: .5em;
-    height: 50px; 
+    height: 30px; 
     position: relative; 
 }
 
@@ -136,7 +136,7 @@ h1 {
     
     .pw {
         width: 100%;
-        min-height: 2rem;
+        min-height: 30px;
         flex-basis: initial;
     }
 }
